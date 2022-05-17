@@ -2,7 +2,7 @@ const theme = {
   colors: {
     whiteColor: '#ffffff',
     blackColor: '#000000',
-    navDarkBg: '#121924',
+    navDarkBg: '#003366',
     grey2: '#fafafa',
     navDarkTextColor: '#038fdd',
     primaryColor: '#f7941d',
@@ -11,13 +11,7 @@ const theme = {
     blurPrimaryColor:'#fff9eb',
     grey4:'#9d9d9d',
     grey5: "#525252",
-    turquoiseBlue: "#6fbfec",
-    magicMint : "#B3F5E1",
-    cyprus: "#101C3D",
-    mortar: "#545454",
-    lynch: "#677489",
-    puertoRico: "#4DB4AC",
-    cinder: "#212529",
+    turquoiseBlue: "#6fbfec"
   },
   variables: {
     sidebarPaddingLr: 30,
@@ -42,20 +36,20 @@ const theme = {
       box-shadow: ${shadow};
     `,
     flexDisPlay: (display: string, direction: string, wrap: string) => `
-      ${display ?
-        `
+      ${display ? 
+        ` 
         display: -webkit-${display};
         display: -ms-${display}box;
         display: -ms-${display};
         display: ${display};
       ` : ''}
-      ${direction ?
+      ${direction ? 
         `
         -webkit-flex-direction: ${direction};
         -ms-flex-direction: ${direction};
         flex-direction: ${direction};
       ` : ''}
-      ${wrap ?
+      ${wrap ? 
         `
         -webkit-flex-wrap: ${wrap};
         -ms-flex-wrap: ${wrap};
