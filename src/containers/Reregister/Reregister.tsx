@@ -1,5 +1,6 @@
 import React from 'react';
 import { Form, Input, Button } from 'antd';
+import {Link} from "react-router-dom";
 import { ReregisterWrapper } from './CustomStyled';
 
 const Reregister: React.FC = () => {
@@ -37,9 +38,11 @@ const Reregister: React.FC = () => {
           </Form.Item>
 
           <Form.Item>
-            <Button type="primary" htmlType="submit">
-              Submit
-            </Button>
+            <Link to="/registercomplication">
+              <Button type="primary" htmlType="submit">
+                Submit
+              </Button>
+            </Link>
           </Form.Item>
         </Form>
       </div>

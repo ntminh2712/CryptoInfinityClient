@@ -1,5 +1,6 @@
 import React from "react";
 import {Button, Form, Input} from 'antd';
+import {Link} from "react-router-dom";
 import {ForgetPasswordWrapper} from "./CustomStyled";
 
 const ForgetPassword : React.FC = () => {
@@ -25,9 +26,11 @@ const ForgetPassword : React.FC = () => {
             <Input/>
           </Form.Item>
           <Form.Item>
-            <Button type="primary" htmlType="submit">
-              Submit
-            </Button>
+            <Link to="/reregister">
+              <Button type="primary" htmlType="submit">
+                Submit
+              </Button>
+            </Link>
           </Form.Item>
         </Form>
       </div>

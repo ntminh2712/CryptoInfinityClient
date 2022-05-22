@@ -47,7 +47,7 @@ const Login: React.FC = () => {
             </Button>
           </Form.Item>
         </Form>
-        <Link to="/">If you forgot your password,click here</Link>
+        <Link to="/forgetPassword">If you forgot your password,click here</Link>
       </div>
     </LoginWrapper>
   )

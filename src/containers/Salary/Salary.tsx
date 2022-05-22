@@ -14,7 +14,17 @@ const Search: React.FC = () => {
     return [
       {
         value: query,
-        label: <div>{query}</div>,
+        label: (
+          <div
+            style={{
+              display: 'flex',
+              justifyContent: 'space-between',
+            }}
+          >
+            <span>{query}</span>
+            <span>{query.length} result</span>
+          </div>
+        ),
       },
     ];
   };

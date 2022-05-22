@@ -4,17 +4,21 @@ import { Link } from 'react-router-dom';
 import { SearchWrapper } from './CustomStyled';
 
 const Search: React.FC = () => {
-  // const { Search } = Input;
-  // const onSearch = (value: any) => console.log(value);
-  function getRandomInt(max: number, min: number = 0) {
-    return Math.floor(Math.random() * (max - min + 1)) + min; // eslint-disable-line no-mixed-operators
-  }
-
   const searchResult = (query: string) => {
     return [
       {
         value: query,
-        label: <div>{query}</div>,
+        label: (
+          <div
+            style={{
+              display: 'flex',
+              justifyContent: 'space-between',
+            }}
+          >
+            <span>{query}</span>
+            <span>{query.length} result</span>
+          </div>
+        ),
       },
     ];
   };

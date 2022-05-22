@@ -8,13 +8,37 @@ const Reregister = lazy(() => import('@/containers/Reregister'));
 const Registercomplication = lazy(() => import('@/containers/Registercomplication'));
 const Newmember = lazy(() => import('@/containers/Newmember'));
 const Search = lazy(() => import('@/containers/Search'));
+const SearchResult = lazy(() => import('@/containers/SearchResult'));
 const Salary = lazy(() => import('@/containers/Salary'));
+const Corporateinfo = lazy(() => import('@/containers/Corporateinfo'));
+const Favorite = lazy(() => import('@/containers/Favorite'));
+const Comporison = lazy(() => import('@/containers/Comporison'));
 
 /*
  * If route has children, it's a parent menu (not link to any pages)
  * You can change permissions to your IAM's permissions
  */
 const routes: IRoute[] = [
+  {
+    path: '/comporison',
+    title: 'Comporison',
+    component: Comporison,
+  },
+  {
+    path: '/favorite',
+    title: 'Favorite',
+    component: Favorite,
+  },
+  {
+    path: '/corporateinfo',
+    title: 'Corporateinfo',
+    component: Corporateinfo,
+  },
+  {
+    path: '/search-result',
+    title: 'SearchResult',
+    component: SearchResult,
+  },
   {
     path: '/salary',
     title: 'Salary',

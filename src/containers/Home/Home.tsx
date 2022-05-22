@@ -1,11 +1,29 @@
-import React from 'react';
+import React from "react";
+import {Button,Divider} from 'antd';
+import {Link} from "react-router-dom";
+import {HomeWrapper} from "./CustomStyled";
 
-const Home: React.FC = () => {
+const ForgetPassword : React.FC = () => {
+
   return (
-    <>
-      HOME
-    </>
-  );
-};
+    <HomeWrapper>
+      <div className="home-content">
+        <div className="home-content-top">
+          <div className="home-content-top-left">
+            <Button type="primary">Top</Button>
+          </div>
+          <div className="home-content-top-right">
+            <Link to="/login">Login</Link>
+            <Link to="/">Bookmark List</Link>
+            <Link to="/">My page</Link>
+            <Link to="/">Annual income simulation</Link>
+          </div>
+        </div>
+        <Divider/>
+      </div>
+    </HomeWrapper>
+  )
+}
 
-export default Home;
+export default ForgetPassword;
+
