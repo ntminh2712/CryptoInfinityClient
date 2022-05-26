@@ -13,12 +13,24 @@ const Salary = lazy(() => import('@/containers/Salary'));
 const Corporateinfo = lazy(() => import('@/containers/Corporateinfo'));
 const Favorite = lazy(() => import('@/containers/Favorite'));
 const Comporison = lazy(() => import('@/containers/Comporison'));
+const Copnfirmation = lazy(() => import('@/containers/Copnfirmation'));
+const Finish = lazy(() => import('@/containers/Finish'));
 
 /*
  * If route has children, it's a parent menu (not link to any pages)
  * You can change permissions to your IAM's permissions
  */
 const routes: IRoute[] = [
+  {
+    path: '/finish',
+    title: 'Finish',
+    component: Finish,
+  },
+  {
+    path: '/copnfirmation',
+    title: 'Copnfirmation',
+    component: Copnfirmation,
+  },
   {
     path: '/comporison',
     title: 'Comporison',

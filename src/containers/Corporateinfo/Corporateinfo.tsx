@@ -21,6 +21,16 @@ const Corporateinfo: React.FC = () => {
           </div>
         </div>
         <Divider/>
+        <div className="corporateinfo-content-bottom">
+          <div>
+            <p>Location :</p>
+            <p>1-chome, Shinjuku-ku, Tokyo ▼▼ Tầng 35 tòa nhà</p>
+          </div>
+          <div>
+            <p>Date :</p>
+            <p>November 2000</p>
+          </div>
+        </div>
       </div>
     </CorporateinfoWrapper>
   );

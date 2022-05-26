@@ -7,7 +7,7 @@ const Registercomplication: React.FC = () => {
   return (
     <RegistercomplicationWrapper>
       <div>
-        <p>Thank you for your registration. Registration has been completed.</p>
+        <p>Re-registration complete</p>
       </div>
       <Link to="/">
         <Button type="primary">Return to Home</Button>

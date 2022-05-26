@@ -1,15 +1,10 @@
 import React, { useState } from 'react';
 import { Input, AutoComplete, Checkbox } from 'antd';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import { SalaryWrapper } from './CustomStyled';
 
 const Search: React.FC = () => {
-  // const { Search } = Input;
-  // const onSearch = (value: any) => console.log(value);
-  function getRandomInt(max: number, min: number = 0) {
-    return Math.floor(Math.random() * (max - min + 1)) + min; // eslint-disable-line no-mixed-operators
-  }
-
+  const history = useHistory();
   const searchResult = (query: string) => {
     return [
       {
@@ -20,6 +15,7 @@ const Search: React.FC = () => {
               display: 'flex',
               justifyContent: 'space-between',
             }}
+            onClick={() => history.push("/search-result")}
           >
             <span>{query}</span>
             <span>{query.length} result</span>

@@ -1,11 +1,14 @@
 import React from "react";
 import {Form, Input, Button, Checkbox} from 'antd';
-import {Link} from "react-router-dom";
+import {Link, useHistory} from "react-router-dom";
 import {LoginWrapper} from "./CustomStyled";
 
 const Login: React.FC = () => {
+  const history = useHistory();
+
   const onFinish = (values: any) => {
     console.log('Success:', values);
+    history.push("/reregister");
   };
 
   const onFinishFailed = (errorInfo: any) => {

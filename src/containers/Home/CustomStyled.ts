@@ -22,5 +22,27 @@ export const HomeWrapper = styled.div`
         gap: 10px;
       }
     }
+
+    .home-content-bottom {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      .home-content-bottom-top {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .home-content-bottom-favorite {
+      }
+    }
   }
+`;
+
+export const FavoriteItem = styled.div`
+  display: flex;
+  gap: 30px;
+  cursor: pointer;
 `;

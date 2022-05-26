@@ -25,5 +25,16 @@ export const CorporateinfoWrapper = styled.div`
         gap: 10px;
       }
     }
+
+    .corporateinfo-content-bottom {
+
+      & > div {
+
+        p:first-child {
+          font-size: 14px;
+          font-weight: bold;
+        }
+      }
+    }
   }
 `;
