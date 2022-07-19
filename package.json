@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "@reduxjs/toolkit": "^1.6.1",
+    "@syncfusion/ej2-react-schedule": "^20.2.38",
     "antd": "^4.16.13",
     "axios": "^0.21.0",
     "i18next": "^19.1.0",

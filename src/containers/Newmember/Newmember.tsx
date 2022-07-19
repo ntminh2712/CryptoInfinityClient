@@ -8,26 +8,22 @@ const Newmember: React.FC = () => {
   return (
     <NewmemberWrapper>
       <div className="newmember-content">
-        <h1>New member registration</h1>
+        <h1>新規会員登録</h1>
         <div className="newmember-desc">
-          <Space size={50}>
-            <p>Email</p>
-            <p>Bắt buộc để đăng ký Trường nhập thông tin</p>
-          </Space>
-          <Space size={50}>
-            <p>Password</p>
-            <p>Bắt buộc để đăng ký Trường nhập thông tin</p>
-          </Space>
-          <Space size={50}>
-            <p>Address</p>
-            <p>Bắt buộc để đăng ký Trường nhập thông tin</p>
-          </Space>
+          <div>
+            <p>登録に必要な</p>
+            <p>情報項目</p>
+          </div>
+          <div>
+            <p>登録に必要な</p>
+            <p>情報入力欄</p>
+          </div>
         </div>
         <div>
-          <Link to="/login">Login</Link>
+          <Link to="/login">ログインはこちらから</Link>
         </div>
-        <Button type="primary" onClick={() => history.push('/reregister')}>
-          Register
+        <Button type="primary" onClick={() => history.push('/copnfirmation')}>
+          登録
         </Button>
       </div>
     </NewmemberWrapper>

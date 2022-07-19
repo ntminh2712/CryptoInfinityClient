@@ -14,9 +14,6 @@ const DefaultLayout = () => {
 
   return (
     <Container>
-      {/*<Row>*/}
-      {/*  <Col>*/}
-      {/*    <Content>*/}
             <Suspense fallback={null}>
               <Switch>
                 {routes.map(
@@ -39,9 +36,6 @@ const DefaultLayout = () => {
                 )}
               </Switch>
             </Suspense>
-          {/*</Content>*/}
-      {/*  </Col>*/}
-      {/*</Row>*/}
     </Container>
   );
 };

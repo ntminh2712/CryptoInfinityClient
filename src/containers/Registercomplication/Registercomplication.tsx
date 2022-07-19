@@ -7,10 +7,10 @@ const Registercomplication: React.FC = () => {
   return (
     <RegistercomplicationWrapper>
       <div>
-        <p>Re-registration complete</p>
+        <p>再登録が完了いたしました</p>
       </div>
       <Link to="/">
-        <Button type="primary">Return to Home</Button>
+        <Button type="primary">TOPへ戻る</Button>
       </Link>
     </RegistercomplicationWrapper>
   );

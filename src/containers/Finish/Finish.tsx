@@ -7,12 +7,10 @@ const Finish: React.FC = () => {
   return (
     <FinishWrapper>
       <div>
-        <p>
-          Thank you for your registration. This registration has been completed.
-        </p>
+        <p>ご登録ありがとうございます。 本登録が完了いたしました。</p>
       </div>
       <Link to="/">
-        <Button type="primary">Return to Home</Button>
+        <Button type="primary">TOPへ戻る</Button>
       </Link>
     </FinishWrapper>
   );

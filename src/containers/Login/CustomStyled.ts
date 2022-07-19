@@ -1,7 +1,6 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const LoginWrapper = styled.div`
-
   display: flex;
   align-items: center;
   justify-content: center;
@@ -9,7 +8,19 @@ export const LoginWrapper = styled.div`
 
   .login-content {
     width: 500px;
-
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
   }
 
-`
+  .ant-form-item-control-input-content {
+    display: flex;
+    justify-content: center;
+  }
+
+  .ant-row.ant-form-item {
+    justify-content: center;
+  }
+
+`;

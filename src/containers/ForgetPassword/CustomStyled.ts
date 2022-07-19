@@ -10,6 +10,12 @@ export const ForgetPasswordWrapper = styled.div`
   .forgetPassword-content {
     width: 500px;
 
+    & > h1 {
+      font-size: 16px;
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
     .ant-form-item-control-input-content {
       display: flex;
       justify-content: center;

@@ -15,14 +15,22 @@ export const CorporateinfoWrapper = styled.div`
       display: flex;
       align-items: center;
       justify-content: space-between;
+      margin-bottom: 20px;
 
       p {
         margin: 0;
+        font-weight: bold;
+        font-size: 20px;
       }
       .corporateinfo-content-top-bookmark {
         display: flex;
         align-items: center;
         gap: 10px;
+
+        & > a {
+          border: 1px solid red;
+          padding: 5px;
+        }
       }
     }
 
@@ -32,7 +40,9 @@ export const CorporateinfoWrapper = styled.div`
 
         p:first-child {
           font-size: 14px;
+          padding: 5px;
           font-weight: bold;
+          background-color: #CFE7F7;
         }
       }
     }

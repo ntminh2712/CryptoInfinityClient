@@ -1,6 +1,6 @@
 import React from 'react';
 import { Form, Input, Button } from 'antd';
-import {Link} from "react-router-dom";
+import { Link } from 'react-router-dom';
 import { ReregisterWrapper } from './CustomStyled';
 
 const Reregister: React.FC = () => {
@@ -22,21 +22,45 @@ const Reregister: React.FC = () => {
           autoComplete="off"
         >
           <Form.Item
-            label="Please enter your New password"
             name="password"
-            rules={[{ required: true, message: 'Please input your password!' }]}
-          >
-            <Input />
-          </Form.Item>
-
-          <Form.Item
-            label="Type it again"
-            name="password"
-            rules={[{ required: true, message: 'Please input your password!' }]}
+            label="Password"
+            rules={[
+              {
+                required: true,
+                message: 'Please input your password!',
+              },
+            ]}
+            hasFeedback
           >
             <Input.Password />
           </Form.Item>
 
+          <Form.Item
+            name="confirm"
+            label="Confirm Password"
+            dependencies={['password']}
+            hasFeedback
+            rules={[
+              {
+                required: true,
+                message: 'Please confirm your password!',
+              },
+              ({ getFieldValue }) => ({
+                validator(_, value) {
+                  if (!value || getFieldValue('password') === value) {
+                    return Promise.resolve();
+                  }
+                  return Promise.reject(
+                    new Error(
+                      'The two passwords that you entered do not match!'
+                    )
+                  );
+                },
+              }),
+            ]}
+          >
+            <Input.Password />
+          </Form.Item>
           <Form.Item>
             <Link to="/registercomplication">
               <Button type="primary" htmlType="submit">

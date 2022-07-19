@@ -12,31 +12,35 @@ export const FavoriteWrapper = styled.div`
     width: 500px;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    align-items: flex-start;
+    justify-content: flex-start;
     gap: 20px;
 
-    .favorite-content-company-list {
+    & > p {
+      border: 1px solid #e4e4e4;
+      padding: 10px;
+      width: 100%;
+      font-weight: bold;
+    }
 
-      .favorite-content-company-item {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 30px;
-        cursor: pointer;
-        .company-item-img {
-          width: 200px;
-          height: 100px;
+    & > a{
+      /* border: 1px solid #e4e4e4; */
+      width: 100%;
+      padding: 5px;
+      color: #000;
+    }
+    /* & > a:nth-child(2) {
+      color: #000;
+    } */
 
-          img {
-            width: 100%;
-            height: 100%;
-          }
-        }
+    &-companies {
+      margin-top: 20px;
+      width: 100%;
 
-        .company-item-desc {
-
-        }
+      & > p {
+        border: 1px solid #e4e4e4;
+        padding: 10px;
+        width: 100%;
       }
     }
   }

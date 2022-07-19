@@ -5,52 +5,30 @@ import { SalaryWrapper } from './CustomStyled';
 
 const Search: React.FC = () => {
   const history = useHistory();
-  const searchResult = (query: string) => {
-    return [
-      {
-        value: query,
-        label: (
-          <div
-            style={{
-              display: 'flex',
-              justifyContent: 'space-between',
-            }}
-            onClick={() => history.push("/search-result")}
-          >
-            <span>{query}</span>
-            <span>{query.length} result</span>
-          </div>
-        ),
-      },
-    ];
-  };
-  const [options, setOptions] = useState<any>([]);
-  const handleSearch = (value: string) => {
-    setOptions(value ? searchResult(value) : []);
-  };
 
-  const onSelect = (value: string) => {
-    console.log('onSelect', value);
-  };
+  const [options, setOptions] = useState<any>([]);
 
   function onChange(checkedValues: any) {
     console.log('checked = ', checkedValues);
   }
 
-  const plainOptions = ['Apple', 'Pear', 'Orange','Banana', 'Test'];
+  const plainOptions = ['指定しない', 'メーカー', '商社', '流通・小売り'];
+  const handleSearch = () => {};
 
   return (
     <SalaryWrapper>
       <div className="salary-content">
-        <AutoComplete
-          dropdownMatchSelectWidth={252}
-          style={{ width: '100%' }}
-          options={options}
-          onSelect={onSelect}
-          onSearch={handleSearch}
-        >
-          <Input.Search size="large" placeholder="search" enterButton />
-        </AutoComplete>
+        <div className="salary-content-head">
+          <h1>Search</h1>
+          <Input placeholder="Search" onChange={handleSearch} />
+        </div>
+        <div>
+          <Link to="/search-result">業界</Link>
+          <Link to="/search-result">地域</Link>
+          <Link to="/search-result">職種</Link>
+          <Link to="/search-result">制度や特徴</Link>
+          <Link to="/search-result">使用状況</Link>
+        </div>
         <div className="salary-content-checkboxs">
           <Checkbox.Group
             options={plainOptions}

@@ -15,6 +15,12 @@ const Favorite = lazy(() => import('@/containers/Favorite'));
 const Comporison = lazy(() => import('@/containers/Comporison'));
 const Copnfirmation = lazy(() => import('@/containers/Copnfirmation'));
 const Finish = lazy(() => import('@/containers/Finish'));
+const Comparisonresult = lazy(() => import('@/containers/Comparisonresult'));
+const Mypage = lazy(() => import('@/containers/Mypage'));
+const Fromcorporate = lazy(() => import('@/containers/Fromcorporate'));
+const Fromcorporateinfo = lazy(() => import('@/containers/Fromcorporateinfo'));
+const Schedule = lazy(() => import('@/containers/Schedule'));
+const Application = lazy(() => import('@/containers/Application'));
 
 /*
  * If route has children, it's a parent menu (not link to any pages)
@@ -22,9 +28,39 @@ const Finish = lazy(() => import('@/containers/Finish'));
  */
 const routes: IRoute[] = [
   {
+    path: '/fromcorporateinfo',
+    title: 'Fromcorporateinfo',
+    component: Fromcorporateinfo,
+  },
+  {
+    path: '/application',
+    title: 'Application',
+    component: Application,
+  },
+  {
+    path: '/schedule',
+    title: 'Schedule',
+    component: Schedule,
+  },
+  {
     path: '/finish',
     title: 'Finish',
     component: Finish,
+  },
+  {
+    path: '/fromcorporate',
+    title: 'Fromcorporate',
+    component: Fromcorporate,
+  },
+  {
+    path: '/mypage',
+    title: 'My Page',
+    component: Mypage,
+  },
+  {
+    path: '/comparisonresult',
+    title: 'Comparisonresult',
+    component: Comparisonresult,
   },
   {
     path: '/copnfirmation',

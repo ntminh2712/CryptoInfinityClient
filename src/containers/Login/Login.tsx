@@ -1,14 +1,24 @@
-import React from "react";
-import {Form, Input, Button, Checkbox} from 'antd';
-import {Link, useHistory} from "react-router-dom";
-import {LoginWrapper} from "./CustomStyled";
+import React from 'react';
+import { Form, Input, Button, Checkbox } from 'antd';
+import { Link, useHistory } from 'react-router-dom';
+import { LoginWrapper } from './CustomStyled';
 
+const formItemLayout = {
+  labelCol: {
+    xs: { span: 24 },
+    sm: { span: 8 },
+  },
+  wrapperCol: {
+    xs: { span: 24 },
+    sm: { span: 16 },
+  },
+};
 const Login: React.FC = () => {
   const history = useHistory();
 
   const onFinish = (values: any) => {
     console.log('Success:', values);
-    history.push("/reregister");
+    history.push('/reregister');
   };
 
   const onFinishFailed = (errorInfo: any) => {
@@ -17,31 +27,38 @@ const Login: React.FC = () => {
   return (
     <LoginWrapper>
       <div className="login-content">
+        <h1>Login</h1>
         <Form
+          {...formItemLayout}
           name="basic"
-          initialValues={{remember: true}}
+          initialValues={{ remember: true }}
           onFinish={onFinish}
           onFinishFailed={onFinishFailed}
           autoComplete="off"
         >
           <Form.Item
-            label="Username"
-            name="username"
-            rules={[{required: true, message: 'Please input your username!'}]}
+            label="Email"
+            name="email"
+            rules={[
+              {
+                type: 'email',
+                message: 'The input is not valid E-mail!',
+              },
+              {
+                required: true,
+                message: 'Please input your E-mail!',
+              },
+            ]}
           >
-            <Input/>
+            <Input />
           </Form.Item>
 
           <Form.Item
             label="Password"
             name="password"
-            rules={[{required: true, message: 'Please input your password!'}]}
+            rules={[{ required: true, message: 'Please input your password!' }]}
           >
-            <Input.Password/>
-          </Form.Item>
-
-          <Form.Item name="remember" valuePropName="checked">
-            <Checkbox>Remember me</Checkbox>
+            <Input.Password />
           </Form.Item>
 
           <Form.Item>
@@ -53,7 +70,7 @@ const Login: React.FC = () => {
         <Link to="/forgetPassword">If you forgot your password,click here</Link>
       </div>
     </LoginWrapper>
-  )
-}
+  );
+};
 
 export default Login;
