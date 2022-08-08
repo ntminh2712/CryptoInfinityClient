@@ -4,6 +4,7 @@ import { Col, Layout, Row } from 'antd';
 import { v4 as uuidv4 } from 'uuid';
 import routes from '@/routes';
 import Container from '@/components/styles/Container';
+import Header from '@/components/layouts/Header';
 import { Helmet } from 'react-helmet';
 import { useTranslation } from 'react-i18next';
 
@@ -15,6 +16,7 @@ const DefaultLayout = () => {
   return (
     <Container>
             <Suspense fallback={null}>
+              <Header/>
               <Switch>
                 {routes.map(
                   ({ component: Component, title, query, ...rest }) => (
