@@ -5,7 +5,8 @@ export const ForgetPasswordWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  /* height: 100vh; */
+  padding-top: 30px;
 
   .forgetPassword-content {
     width: 500px;

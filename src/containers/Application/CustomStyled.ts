@@ -5,7 +5,7 @@ export const ApplicationWrapper = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  padding-top: 30px;
   gap: 20px;
 
   .application-content {
