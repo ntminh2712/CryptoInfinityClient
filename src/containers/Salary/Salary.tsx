@@ -14,13 +14,19 @@ const Search: React.FC = () => {
 
   const plainOptions = ['指定しない', 'メーカー', '商社', '流通・小売り'];
   const handleSearch = () => {};
-
+  const handleEnter = () => {
+    history.push('/search-result');
+  };
   return (
     <SalaryWrapper>
       <div className="salary-content">
         <div className="salary-content-head">
           <h1>Search</h1>
-          <Input placeholder="Search" onChange={handleSearch} />
+          <Input
+            placeholder="Search"
+            onChange={handleSearch}
+            onPressEnter={handleEnter}
+          />
         </div>
         <div>
           <Link to="/search-result">業界</Link>
