@@ -7,7 +7,7 @@ const Search: React.FC = () => {
   const history = useHistory();
   const handleSearch = () => {};
   const handleEnter = () => {
-    history.push('/search-result');
+    // history.push('/search-result');
   };
   return (
     <SearchWrapper>

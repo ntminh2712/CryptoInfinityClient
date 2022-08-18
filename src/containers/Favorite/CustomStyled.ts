@@ -24,11 +24,12 @@ export const FavoriteWrapper = styled.div`
       font-weight: bold;
     }
 
-    & > a{
+    & > a {
       /* border: 1px solid #e4e4e4; */
       width: 100%;
       padding: 5px;
       color: #000;
+      text-decoration: underline;
     }
     /* & > a:nth-child(2) {
       color: #000;
@@ -42,6 +43,24 @@ export const FavoriteWrapper = styled.div`
         border: 1px solid #e4e4e4;
         padding: 10px;
         width: 100%;
+      }
+
+      & > div.searchResult-item {
+        margin-top: 10px;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        gap: 10px;
+        cursor: pointer;
+        & > div:first-child {
+          width: 200px;
+          height: 100px;
+
+          & > img {
+            width: 100%;
+            height: 100%;
+          }
+        }
       }
     }
   }

@@ -16,11 +16,11 @@ const Comporison: React.FC = () => {
           }}/>
         </div>
         <div>
-          <Link to="/">業界</Link>
-          <Link to="/">地域</Link>
-          <Link to="/">職種</Link>
-          <Link to="/">制度や特徴</Link>
-          <Link to="/">使用状況</Link>
+          <Link to="/comparisonresult">業界</Link>
+          <Link to="/comparisonresult">地域</Link>
+          <Link to="/comparisonresult">職種</Link>
+          <Link to="/comparisonresult">制度や特徴</Link>
+          <Link to="/comparisonresult">使用状況</Link>
         </div>
       </div>
     </ComporisonWrapper>
