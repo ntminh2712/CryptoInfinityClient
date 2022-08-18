@@ -13,7 +13,7 @@ const Search: React.FC = () => {
     <SearchWrapper>
       <div className="search-content">
         <div className="search-content-head">
-          <h1>Search</h1>
+          <h1>検索</h1>
           <Input placeholder="Search" onChange={handleSearch} onPressEnter={handleEnter}/>
         </div>
         <div>
