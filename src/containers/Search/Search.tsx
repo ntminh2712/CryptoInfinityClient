@@ -5,8 +5,7 @@ import { SearchWrapper } from './CustomStyled';
 
 const Search: React.FC = () => {
   const history = useHistory();
-  const handleSearch = () => {
-  };
+  const handleSearch = () => {};
   const handleEnter = () => {
     // history.push('/search-result');
   };
@@ -23,12 +22,13 @@ const Search: React.FC = () => {
         <div className="search-content-head">
           <h1>検索</h1>
           <Form
+            name="form-search"
             layout="inline"
             onFinish={onFinish}
             onFinishFailed={onFinishFailed}
             autoComplete="off"
           >
-            <Form.Item>
+            <Form.Item name="search">
               <Input
                 placeholder="Search"
                 onChange={handleSearch}
