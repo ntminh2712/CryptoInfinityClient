@@ -1,20 +1,46 @@
 import React, { useState } from 'react';
-import { Button, Input, AutoComplete } from 'antd';
+import { Button, Input, AutoComplete, Form } from 'antd';
 import { Link, useHistory } from 'react-router-dom';
 import { SearchWrapper } from './CustomStyled';
 
 const Search: React.FC = () => {
   const history = useHistory();
-  const handleSearch = () => {};
+  const handleSearch = () => {
+  };
   const handleEnter = () => {
     // history.push('/search-result');
+  };
+  const onFinish = (values: any) => {
+    console.log('Success:', values);
+  };
+
+  const onFinishFailed = (errorInfo: any) => {
+    console.log('Failed:', errorInfo);
   };
   return (
     <SearchWrapper>
       <div className="search-content">
         <div className="search-content-head">
           <h1>検索</h1>
-          <Input placeholder="Search" onChange={handleSearch} onPressEnter={handleEnter}/>
+          <Form
+            layout="inline"
+            onFinish={onFinish}
+            onFinishFailed={onFinishFailed}
+            autoComplete="off"
+          >
+            <Form.Item>
+              <Input
+                placeholder="Search"
+                onChange={handleSearch}
+                onPressEnter={handleEnter}
+              />
+            </Form.Item>
+            <Form.Item>
+              <Button type="primary" htmlType="submit">
+                Submit
+              </Button>
+            </Form.Item>
+          </Form>
         </div>
         <div>
           <Link to="/salary">業界</Link>

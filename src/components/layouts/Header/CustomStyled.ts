@@ -5,7 +5,7 @@ export const HeaderWrapper = styled(Affix)`
   width: 100%;
   height: 70px;
 
-  & > div {
+  & > div:last-child {
     border-bottom: solid 1px #418ce1;
     width: 100%;
     height: 100%;
