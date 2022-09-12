@@ -1,17 +1,41 @@
 import React, { useState } from 'react';
-import { Button, Input, AutoComplete } from 'antd';
+import { Button, Input, AutoComplete, Form } from 'antd';
 import { Link, useHistory } from 'react-router-dom';
 import { SearchResultWrapper } from './CustomStyled';
+import { SearchOutlined } from '@ant-design/icons';
 
 const SearchResult: React.FC = () => {
   const history = useHistory();
+  const onFinish = (values: any) => {
+    console.log('Success:', values);
+  };
+
+  const onFinishFailed = (errorInfo: any) => {
+    console.log('Failed:', errorInfo);
+  };
 
   return (
     <SearchResultWrapper>
       <div className="searchResult-content">
         <div className="searchResult-content-head">
           <h1>Search</h1>
-          <Input placeholder="Search" onChange={() => {}} />
+          {/* <Input placeholder="Search" onChange={() => {}} /> */}
+          <Form
+            name="form-search"
+            layout="inline"
+            onFinish={onFinish}
+            onFinishFailed={onFinishFailed}
+            autoComplete="off"
+          >
+            <Form.Item name="search">
+              <Input placeholder="Search" onChange={() => {}} />
+            </Form.Item>
+            <Form.Item>
+              <Button type="primary" htmlType="submit">
+                <SearchOutlined />
+              </Button>
+            </Form.Item>
+          </Form>
           <div className="searchResult-amount">
             <p>123 result</p>
           </div>
