@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Button, Input, AutoComplete, Form } from 'antd';
+import { SearchOutlined } from '@ant-design/icons';
 import { Link, useHistory } from 'react-router-dom';
 import { SearchWrapper } from './CustomStyled';
 
@@ -37,7 +38,7 @@ const Search: React.FC = () => {
             </Form.Item>
             <Form.Item>
               <Button type="primary" htmlType="submit">
-                Submit
+                <SearchOutlined />
               </Button>
             </Form.Item>
           </Form>

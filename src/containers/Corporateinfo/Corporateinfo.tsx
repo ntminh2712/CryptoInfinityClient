@@ -26,39 +26,33 @@ const Corporateinfo: React.FC = () => {
         </div>
         <div className="corporateinfo-content-bottom">
           <div>
-            <p>Address</p>
-            <p>
-              Shinjuku Dori Toyo Building 10F, 2-6-4 Shinjuku, Shinjuku-ku,
-              Tokyo
-            </p>
+            <p>住所</p>
+            <p>新宿区新宿2-6-4 新宿通り東洋ビル10F 東京</p>
           </div>
           <div>
-            <p>Employment Type</p>
-            <p>Contract employee</p>
+            <p>雇用形態</p>
+            <p>契約社員</p>
           </div>
 
           <div>
-            <p>Business description/job description</p>
-            <p>
-              Sales of smart phones and internet at home electronics retail
-              stores.
-            </p>
+            <p>事業内容・職務内容</p>
+            <p>家電量販店でのスマートフォン・インターネットの販売 店。</p>
           </div>
           <div>
-            <p>Five-day</p>
-            <p>work week</p>
+            <p>五日</p>
+            <p>勤務週</p>
           </div>
           <div>
-            <p>Shift system</p>
-            <p>Varies depending on store shift.e</p>
+            <p>シフト制</p>
+            <p>店舗シフトにより異なります。</p>
           </div>
           <div>
-            <p>Transportation</p>
-            <p>Varies depending on the location</p>
+            <p>交通手段</p>
+            <p>場所によって異なります</p>
           </div>
           <div>
-            <p>Location [Kanto area]</p>
-            <p>Tokyo, Kanagawa, Saitama, Chiba</p>
+            <p>場所【関東エリア】</p>
+            <p>東京、神奈川、埼玉、千葉</p>
           </div>
         </div>
       </div>
