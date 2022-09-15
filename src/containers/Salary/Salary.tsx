@@ -20,6 +20,7 @@ const Search: React.FC = () => {
   };
   const onFinish = (values: any) => {
     console.log('Success:', values);
+    history.push('/search-result');
   };
 
   const onFinishFailed = (errorInfo: any) => {
