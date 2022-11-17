@@ -18,7 +18,7 @@ const SearchResult: React.FC = () => {
     <SearchResultWrapper>
       <div className="searchResult-content">
         <div className="searchResult-content-head">
-          <h1>Search</h1>
+          <h1>探す</h1>
           {/* <Input placeholder="Search" onChange={() => {}} /> */}
           <Form
             name="form-search"
@@ -28,7 +28,7 @@ const SearchResult: React.FC = () => {
             autoComplete="off"
           >
             <Form.Item name="search">
-              <Input placeholder="Search" onChange={() => {}} />
+              <Input placeholder="探す" onChange={() => {}} />
             </Form.Item>
             <Form.Item>
               <Button type="primary" htmlType="submit">
@@ -37,7 +37,7 @@ const SearchResult: React.FC = () => {
             </Form.Item>
           </Form>
           <div className="searchResult-amount">
-            <p>123 result</p>
+            <p>123 結果</p>
           </div>
         </div>
         <div>

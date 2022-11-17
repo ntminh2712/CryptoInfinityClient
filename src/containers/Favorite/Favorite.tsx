@@ -9,8 +9,7 @@ const Favorite: React.FC = () => {
   return (
     <FavoriteWrapper>
       <div className="favorite-content">
-        <p>比較する</p>
-        <Link to="/comporison">詳細設定</Link>
+        <p className="favorite-content-title">お気に入りリスト</p>
         <div className="favorite-content-companies">
           {/* <p>株式会社</p>
           <p>有限会社</p> */}
@@ -45,6 +44,8 @@ const Favorite: React.FC = () => {
             </div>
           </div>
         </div>
+        <p>比較する</p>
+        <Link to="/comporison">詳細設定</Link>
       </div>
     </FavoriteWrapper>
   );

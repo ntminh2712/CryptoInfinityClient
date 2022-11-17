@@ -45,7 +45,7 @@ const Search: React.FC = () => {
           >
             <Form.Item name="salary">
               <Input
-                placeholder="Search"
+                placeholder="探す"
                 onChange={handleSearch}
                 onPressEnter={handleEnter}
               />
