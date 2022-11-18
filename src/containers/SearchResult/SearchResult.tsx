@@ -18,7 +18,7 @@ const SearchResult: React.FC = () => {
     <SearchResultWrapper>
       <div className="searchResult-content">
         <div className="searchResult-content-head">
-          <h1>探す</h1>
+          <h1>検索</h1>
           {/* <Input placeholder="Search" onChange={() => {}} /> */}
           <Form
             name="form-search"
@@ -37,7 +37,7 @@ const SearchResult: React.FC = () => {
             </Form.Item>
           </Form>
           <div className="searchResult-amount">
-            <p>123 結果</p>
+            <p>検索結果123件</p>
           </div>
         </div>
         <div>
