@@ -42,7 +42,7 @@ export const SearchResultWrapper = styled.div`
         }
       }
     }
-    &>div:nth-child(2){
+    & > div.searchResult-content-filter {
       display: flex;
       width: 100%;
       align-items: center;
@@ -51,23 +51,27 @@ export const SearchResultWrapper = styled.div`
 
       & > p {
         margin: 0;
+        cursor: pointer;
       }
     }
 
-    & > div.searchResult-item {
-      margin-top: 10px;
-      display: flex;
-      align-items: center;
-      width: 100%;
-      gap: 10px;
-      cursor: pointer;
-      & > div:first-child {
-        width: 200px;
-        height: 100px;
+    & > div.searchResult-content-list-item {
+      & > div.searchResult-item {
+        margin-top: 10px;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        gap: 10px;
+        cursor: pointer;
+        & > div:first-child {
+          width: 200px;
+          height: 100px;
+          min-width: 200px;
 
-        & > img {
-          width: 100%;
-          height: 100%;
+          & > img {
+            width: 100%;
+            height: 100%;
+          }
         }
       }
     }
