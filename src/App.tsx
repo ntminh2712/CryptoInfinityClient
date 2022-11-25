@@ -1,13 +1,12 @@
+import '@/assets/vendors/styles';
 import React from 'react';
 import './App.less';
-import '@/assets/vendors/styles';
 // Routing
 import { BrowserRouter as Router, Switch } from 'react-router-dom';
 
-
 // Layouts
-import DefaultLayout from '@/components/layouts/DefaultLayout';
 import PrivateRoute from '@/components/common/PrivateRoute';
+import DefaultLayout from '@/components/layouts/DefaultLayout';
 
 const App: React.FC = () => {
   return (

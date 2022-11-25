@@ -1,12 +1,6 @@
-import { getItem } from '@/redux/slice';
-import { SearchOutlined } from '@ant-design/icons';
-import { Button, Form, Input } from 'antd';
-import React from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { useHistory } from 'react-router-dom';
-import { SearchResultWrapper } from './CustomStyled';
+import { createSlice } from '@reduxjs/toolkit';
 
-const fakeDataItem1 = [
+const fakeData = [
   {
     id: 0,
     name: '株式会社APパートナーズ',
@@ -43,8 +37,7 @@ const fakeDataItem1 = [
     image:
       'https://img.meta.com.vn/Data/image/2022/01/13/anh-dep-thien-nhien-3.jpg',
   },
-];
-const fakeDataItem2 = [
+
   {
     id: 3,
     name: '株式会社ITソリューションズ',
@@ -81,8 +74,7 @@ const fakeDataItem2 = [
     image:
       'https://s3.ap-northeast-1.amazonaws.com/uploaded-files.my-sto.com/companies/production/827680d7b35220e49e39f6899fddaecf.png',
   },
-];
-const fakeDataItem3 = [
+
   {
     id: 6,
     name: '新宿区名古屋市北区金田町4-721-1',
@@ -121,75 +113,90 @@ const fakeDataItem3 = [
   },
 ];
 
-const SearchResult: React.FC = () => {
-  const [data, setData] = React.useState(fakeDataItem1);
-  const history = useHistory();
-  const dispatch = useDispatch();
+// const fakeData = [
+//   {
+//     id: 0,
+//     name: '株式会社APパートナーズ',
+//     location: '新宿区新宿2-6-4 新宿通り東洋ビル10F 東京',
+//     image:
+//       'https://s3.ap-northeast-1.amazonaws.com/uploaded-files.my-sto.com/companies/production/827680d7b35220e49e39f6899fddaecf.png',
+//   },
+//   {
+//     id: 1,
+//     name: '株式会社ITソリューションズ',
+//     location: '新宿区守口市佐太東町3-101-5',
+//     image:
+//       'https://img.thuthuattinhoc.vn/uploads/2019/01/13/anh-dep-vung-nui-viet-nam_105620901.jpeg',
+//   },
+//   {
+//     id: 2,
+//     name: '新宿区名古屋市北区金田町4-721-1',
+//     location: '勤 務 地一都三県（東京都・埼玉県・千葉県・神奈川 県）',
+//     image:
+//       'https://img.meta.com.vn/Data/image/2022/01/13/anh-dep-thien-nhien-3.jpg',
+//   },
+//   {
+//     id: 3,
+//     name: '株式会社ITソリューションズ',
+//     location: '新宿区守口市佐太東町3-101-5',
+//     image:
+//       'https://img.thuthuattinhoc.vn/uploads/2019/01/13/anh-dep-vung-nui-viet-nam_105620901.jpeg',
+//   },
+//   {
+//     id: 4,
+//     name: '新宿区名古屋市北区金田町4-721-1',
+//     location: '勤 務 地一都三県（東京都・埼玉県・千葉県・神奈川 県）',
+//     image:
+//       'https://img.meta.com.vn/Data/image/2022/01/13/anh-dep-thien-nhien-3.jpg',
+//   },
+//   {
+//     id: 5,
+//     name: '株式会社APパートナーズ',
+//     location: '新宿区新宿2-6-4 新宿通り東洋ビル10F 東京',
+//     image:
+//       'https://s3.ap-northeast-1.amazonaws.com/uploaded-files.my-sto.com/companies/production/827680d7b35220e49e39f6899fddaecf.png',
+//   },
+//   {
+//     id: 6,
+//     name: '新宿区名古屋市北区金田町4-721-1',
+//     location: '勤 務 地一都三県（東京都・埼玉県・千葉県・神奈川 県）',
+//     image:
+//       'https://img.meta.com.vn/Data/image/2022/01/13/anh-dep-thien-nhien-3.jpg',
+//   },
+//   {
+//     id: 7,
+//     name: '株式会社APパートナーズ',
+//     location: '新宿区新宿2-6-4 新宿通り東洋ビル10F 東京',
+//     image:
+//       'https://s3.ap-northeast-1.amazonaws.com/uploaded-files.my-sto.com/companies/production/827680d7b35220e49e39f6899fddaecf.png',
+//   },
+//   {
+//     id: 8,
+//     name: '株式会社ITソリューションズ',
+//     location: '新宿区守口市佐太東町3-101-5',
+//     image:
+//       'https://img.thuthuattinhoc.vn/uploads/2019/01/13/anh-dep-vung-nui-viet-nam_105620901.jpeg',
+//   },
+// ];
 
-  const onFinish = (values: any) => {
-    console.log('Success:', values);
-  };
+const initialState: any[] = [];
 
-  const onFinishFailed = (errorInfo: any) => {
-    console.log('Failed:', errorInfo);
-  };
+const appSlice = createSlice({
+  name: 'app',
+  initialState,
+  reducers: {
+    getItem(state, action) {
+      console.log('redux', state);
+      console.log('redux action', action);
 
-  return (
-    <SearchResultWrapper>
-      <div className="searchResult-content">
-        <div className="searchResult-content-head">
-          <h1>検索</h1>
-          {/* <Input placeholder="Search" onChange={() => {}} /> */}
-          <Form
-            name="form-search"
-            layout="inline"
-            onFinish={onFinish}
-            onFinishFailed={onFinishFailed}
-            autoComplete="off"
-          >
-            <Form.Item name="search">
-              <Input placeholder="探す" onChange={() => {}} />
-            </Form.Item>
-            <Form.Item>
-              <Button type="primary" htmlType="submit">
-                <SearchOutlined />
-              </Button>
-            </Form.Item>
-          </Form>
-          <div className="searchResult-amount">
-            <p>検索結果123件</p>
-          </div>
-        </div>
-        <div className="searchResult-content-filter">
-          <p onClick={() => setData(fakeDataItem1)}>新着順</p>
-          <p onClick={() => setData(fakeDataItem2)}>締切間近順</p>
-          <p onClick={() => setData(fakeDataItem3)}>おすすめ順</p>
-        </div>
-        <div className="searchResult-content-list-item">
-          {data.map((item, index) => {
-            return (
-              <div
-                key={index}
-                className="searchResult-item"
-                onClick={() => {
-                  history.push('/corporateinfo');
-                  dispatch(getItem(item.id));
-                }}
-              >
-                <div>
-                  <img src={item.image} alt="#" />
-                </div>
-                <div>
-                  <p>{item.name}</p>
-                  <p>{item.location}</p>
-                </div>
-              </div>
-            );
-          })}
-        </div>
-      </div>
-    </SearchResultWrapper>
-  );
-};
+      return [fakeData.find(item => item.id === action.payload)];
+    },
+    getCurrentItem(state) {
+      return state;
+    },
+  },
+});
 
-export default SearchResult;
+const { reducer } = appSlice;
+export const { getItem, getCurrentItem } = appSlice.actions;
+export default reducer;
