@@ -1,8 +1,10 @@
-import React, { useState } from 'react';
-import { Button, Input, AutoComplete, Form } from 'antd';
-import { Link, useHistory } from 'react-router-dom';
-import { SearchResultWrapper } from './CustomStyled';
+import { getItem } from '@/redux/slice';
 import { SearchOutlined } from '@ant-design/icons';
+import { Button, Form, Input } from 'antd';
+import React from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { useHistory } from 'react-router-dom';
+import { SearchResultWrapper } from './CustomStyled';
 
 const fakeDataItem1 = [
   {
@@ -118,9 +120,11 @@ const fakeDataItem3 = [
       'https://img.thuthuattinhoc.vn/uploads/2019/01/13/anh-dep-vung-nui-viet-nam_105620901.jpeg',
   },
 ];
-
 const SearchResult: React.FC = () => {
+  const [data, setData] = React.useState(fakeDataItem1);
   const history = useHistory();
+  const dispatch = useDispatch();
+
   const onFinish = (values: any) => {
     console.log('Success:', values);
   };
@@ -133,7 +137,7 @@ const SearchResult: React.FC = () => {
     <SearchResultWrapper>
       <div className="searchResult-content">
         <div className="searchResult-content-head">
-          <h1>Search</h1>
+          <h1>検索</h1>
           {/* <Input placeholder="Search" onChange={() => {}} /> */}
           <Form
             name="form-search"
@@ -143,7 +147,7 @@ const SearchResult: React.FC = () => {
             autoComplete="off"
           >
             <Form.Item name="search">
-              <Input placeholder="Search" onChange={() => {}} />
+              <Input placeholder="探す" onChange={() => {}} />
             </Form.Item>
             <Form.Item>
               <Button type="primary" htmlType="submit">
@@ -152,14 +156,13 @@ const SearchResult: React.FC = () => {
             </Form.Item>
           </Form>
           <div className="searchResult-amount">
-            <p>123 result</p>
-            <p>検索結果3件</p>
+            <p>検索結果123件</p>
           </div>
         </div>
-        <div>
-          <p>新着順</p>
-          <p>締切間近順</p>
-          <p>おすすめ順</p>
+        <div className="searchResult-content-filter">
+          <p onClick={() => setData(fakeDataItem1)}>新着順</p>
+          <p onClick={() => setData(fakeDataItem2)}>締切間近順</p>
+          <p onClick={() => setData(fakeDataItem3)}>おすすめ順</p>
         </div>
         <div className="searchResult-content-list-item">
           {data.map((item, index) => {
