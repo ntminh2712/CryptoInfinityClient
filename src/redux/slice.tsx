@@ -27,8 +27,8 @@ const fakeData = [
   },
   {
     id: 2,
-    name: '新宿区名古屋市北区金田町4-721-1',
-    location: '勤 務 地一都三県（東京都・埼玉県・千葉県・神奈川 県）',
+    name: '株式会社エンジニアリング',
+    location: '新宿区名古屋市北区金田町4-721-1',
     employmentStatus: '派遣社員',
     BusinessAndDuties: '家電量販店でのスマートフォン・インターネットの販売店。',
     wayOfWorking: 'シフト制(週休2日)',
@@ -52,8 +52,8 @@ const fakeData = [
   },
   {
     id: 4,
-    name: '新宿区名古屋市北区金田町4-721-1',
-    location: '勤 務 地一都三県（東京都・埼玉県・千葉県・神奈川 県）',
+    name: '株式会社エンジニアリング',
+    location: '新宿区名古屋市北区金田町4-721-1',
     employmentStatus: '派遣社員',
     BusinessAndDuties: '家電量販店でのスマートフォン・インターネットの販売店。',
     wayOfWorking: 'シフト制(週休2日)',
@@ -77,8 +77,8 @@ const fakeData = [
 
   {
     id: 6,
-    name: '新宿区名古屋市北区金田町4-721-1',
-    location: '勤 務 地一都三県（東京都・埼玉県・千葉県・神奈川 県）',
+    name: '株式会社エンジニアリング',
+    location: '新宿区名古屋市北区金田町4-721-1',
     employmentStatus: '派遣社員',
     BusinessAndDuties: '家電量販店でのスマートフォン・インターネットの販売店。',
     wayOfWorking: 'シフト制(週休2日)',
