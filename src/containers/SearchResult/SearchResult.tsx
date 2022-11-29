@@ -155,11 +155,8 @@ const SearchResult: React.FC = () => {
             </Form.Item>
           </Form>
           <div className="searchResult-amount">
-<<<<<<< Updated upstream
             <p>123 result</p>
-=======
             <p>検索結果3件</p>
->>>>>>> Stashed changes
           </div>
         </div>
         <div>
@@ -167,22 +164,6 @@ const SearchResult: React.FC = () => {
           <p>締切間近順</p>
           <p>おすすめ順</p>
         </div>
-<<<<<<< Updated upstream
-        <div
-          className="searchResult-item"
-          onClick={() => history.push('/corporateinfo')}
-        >
-          <div>
-            <img
-              src="https://s3.ap-northeast-1.amazonaws.com/uploaded-files.my-sto.com/companies/production/827680d7b35220e49e39f6899fddaecf.png"
-              alt="#"
-            />
-          </div>
-          <div>
-            <p>業種</p>
-            <p>勤 務 地一都三県（東京都・埼玉県・千葉県・神奈川 県）</p>
-          </div>
-=======
         <div className="searchResult-content-list-item">
           {data.map((item, index) => {
             return (
@@ -205,7 +186,6 @@ const SearchResult: React.FC = () => {
               </div>
             );
           })}
->>>>>>> Stashed changes
         </div>
       </div>
     </SearchResultWrapper>
