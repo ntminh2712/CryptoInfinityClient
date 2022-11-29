@@ -27,7 +27,7 @@ const Login: React.FC = () => {
   return (
     <LoginWrapper>
       <div className="login-content">
-        <h1>Login</h1>
+        <h1>ログイン</h1>
         <Form
           {...formItemLayout}
           name="basic"
@@ -37,16 +37,16 @@ const Login: React.FC = () => {
           autoComplete="off"
         >
           <Form.Item
-            label="Email"
+            label="郵便物"
             name="email"
             rules={[
               {
                 type: 'email',
-                message: 'The input is not valid E-mail!',
+                message: '入力が有効な電子メールではありません!',
               },
               {
                 required: true,
-                message: 'Please input your E-mail!',
+                message: 'メールアドレスを入力してください!',
               },
             ]}
           >
@@ -54,20 +54,22 @@ const Login: React.FC = () => {
           </Form.Item>
 
           <Form.Item
-            label="Password"
+            label="パスワード"
             name="password"
-            rules={[{ required: true, message: 'Please input your password!' }]}
+            rules={[
+              { required: true, message: 'パスワードを入力してください!' },
+            ]}
           >
             <Input.Password />
           </Form.Item>
 
           <Form.Item>
             <Button type="primary" htmlType="submit">
-              Submit
+              送信
             </Button>
           </Form.Item>
         </Form>
-        <Link to="/forgetPassword">If you forgot your password,click here</Link>
+        <Link to="/forgetPassword">パスワードをお忘れの方はこちら</Link>
       </div>
     </LoginWrapper>
   );

@@ -10,20 +10,20 @@ const Header: React.FC = () => {
       <div>
         <div className="header">
           <div className="header-left">
-            <Link to={'/'}>My STO</Link>
+            <Link to={'/'}>MYSTO</Link>
           </div>
           <div className="header-right">
             <Link to="/login">
               <ExportOutlined style={{ fontSize: '28px' }} />
-              <span>Login</span>
+              <span>ログイン</span>
             </Link>
             <Link to="/favorite">
               <CrownOutlined style={{ fontSize: '28px' }} />
-              <span>Favorite List</span>
+              <span>お気に入りリスト</span>
             </Link>
             <Link to="/mypage">
               <UserOutlined style={{ fontSize: '28px' }} />
-              <span>My page</span>
+              <span>マイページ</span>
             </Link>
           </div>
         </div>

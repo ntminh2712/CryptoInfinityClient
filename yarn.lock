@@ -1659,7 +1659,6 @@
     "@svgr/plugin-jsx" "^4.3.3"
     "@svgr/plugin-svgo" "^4.3.1"
     loader-utils "^1.2.3"
-
 "@syncfusion/ej2-base@~20.2.38", "@syncfusion/ej2-base@~20.2.39":
   version "20.2.39"
   resolved "https://registry.yarnpkg.com/@syncfusion/ej2-base/-/ej2-base-20.2.39.tgz#05c8e6ede7ce155e83fe5d65648c0b3d6161bb60"

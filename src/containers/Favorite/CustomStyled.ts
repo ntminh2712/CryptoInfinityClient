@@ -24,6 +24,13 @@ export const FavoriteWrapper = styled.div`
       font-weight: bold;
     }
 
+    & > p.favorite-content-title {
+      border: none;
+      font-size: 20px;
+      padding: 0;
+      margin: 0;
+    }
+
     & > a {
       /* border: 1px solid #e4e4e4; */
       width: 100%;
@@ -36,7 +43,7 @@ export const FavoriteWrapper = styled.div`
     } */
 
     &-companies {
-      margin-top: 20px;
+      /* margin-top: 20px; */
       width: 100%;
 
       & > p {

@@ -20,6 +20,7 @@ const Search: React.FC = () => {
   };
   const onFinish = (values: any) => {
     console.log('Success:', values);
+    history.push('/search-result');
   };
 
   const onFinishFailed = (errorInfo: any) => {
@@ -44,7 +45,7 @@ const Search: React.FC = () => {
           >
             <Form.Item name="salary">
               <Input
-                placeholder="Search"
+                placeholder="探す"
                 onChange={handleSearch}
                 onPressEnter={handleEnter}
               />
