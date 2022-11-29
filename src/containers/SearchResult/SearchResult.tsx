@@ -2,9 +2,7 @@ import React, { useState } from 'react';
 import { Button, Input, AutoComplete, Form } from 'antd';
 import { Link, useHistory } from 'react-router-dom';
 import { SearchResultWrapper } from './CustomStyled';
-<<<<<<< Updated upstream
 import { SearchOutlined } from '@ant-design/icons';
-=======
 
 const fakeDataItem1 = [
   {
@@ -120,7 +118,6 @@ const fakeDataItem3 = [
       'https://img.thuthuattinhoc.vn/uploads/2019/01/13/anh-dep-vung-nui-viet-nam_105620901.jpeg',
   },
 ];
->>>>>>> Stashed changes
 
 const SearchResult: React.FC = () => {
   const history = useHistory();
