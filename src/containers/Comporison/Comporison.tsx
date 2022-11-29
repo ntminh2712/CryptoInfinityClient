@@ -11,9 +11,6 @@ const Comporison: React.FC = () => {
       <div className="comporison-content">
         <div className="comporison-content-head">
           <h1>比較</h1>
-          <Input placeholder="Search" onChange={handleSearch} onPressEnter={()=>{
-            history.push('/comparisonresult')
-          }}/>
         </div>
         <div>
           <Link to="/comparisonresult">業界</Link>
